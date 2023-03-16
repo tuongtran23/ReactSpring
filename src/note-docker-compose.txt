@@ -1,0 +1,20 @@
+- Orders:
+
+  1. run ./mvnw clean install jib:build -Djib.to.image=codytran23/spring-react-fullstack:v1 
+  
+     to push this image associated with tag to dockerhub
+  
+  2. create a docker-compose.yml file configure the image on dockerhub (look into docker-compose.yml for details):
+    image: "codytran23/spring-react-fullstack:3"
+
+  3. In ElasticBeantalk 
+(https://us-east-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/environment/dashboard?applicationName=springboot-react-fullstack&environmentId=e-jmdyysqde8)
+    Click on Upload and deploy, then load the local docker-compose.yml
+
+
+
+
+- To change profile in docker-compose.yml, add the followings:
+
+    environment:
+      SPRING_PROFILES_ACTIVE: dev

@@ -1,0 +1,67 @@
+- Download docker engine: https://docs.docker.com/desktop/mac/release-notes/3.x/
+
+- Build image command: ./mvnw jib:dockerBuild -Djib.to.image=fullstack:v1
+- Run the image command: docker run --name fullstack -p 8080:8080 fullstack:v1
+                                                                       ||
+                                                               image repository
+
+
+- If you want to map the image to port 3000 on localhost, use: docker run --name fullstack -p   3000    :   8080  fullstack:v1
+                                                                                                 ||          ||             ||
+                                                                                                host        image           tag
+                                                                                                port        port
+
+
+- Push image to dockerhub:      ./mvnw clean install jib:build -Djib.to.image=   codytran23/spring-react-fullstack : v1
+                                                                                       ||                            ||
+                                                                            dockerhub-username                      tag
+
+- With credential:  ./mvnw jib:build -Djib.to.image=codytran23/spring-react-fullstack:latest -Djib.to.auth.username=codytran23 -Djib.to.auth.password=dummypassword
+
+- List all docker image: docker image ls
+
+- List all docker container: docker ps -a
+
+- Remove docker container: docker rm -f CONTAINER ID
+
+- Steps to create docker image for Postgres database:
+    1. Create network for db:
+
+            docker network create db
+
+
+    2. Run image command to create HOST container:
+
+       First, create a folder to mount /var/lib/postgresql/data from the postgres container and cd to that folder:
+            $ mkdir db-data
+            $ cd db-data
+
+
+       Second, in the db-data, run the following command
+
+           $ docker run --name hostdb -p 5432:5432 \
+            --network=db \
+            -v "$PWD:/var/lib/postgresql/data" \
+            -e POSTGRES_PASSWORD=password \
+            -d postgres:alpine
+
+            (-p: port, -v: volumn, -e: environment, -d: detach mode)
+
+        error found :
+
+        Unable to find image '5432:5432' locally
+        docker: Error response from daemon: pull access denied for 5432, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+        See 'docker run --help'
+
+        soln:
+
+        flag -p (-p 5432:5432) does not escape line
+
+
+    3. Run image command to create psql container and interact with host hostdb:
+
+            docker run -it --rm --network=db postgres:alpine \
+            psql -h hostdb -U postgres
+
+            (-it: Interactive --rm: Remove container after terminated -h: Host -U: User)
+

@@ -1,0 +1,597 @@
+codytran@Codys-MBP course % ./mvnw clean install -P build-frontend -P jib-push-to-dockerhub -Dapp.image.tag=3
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -------------------------< com.example:course >-------------------------
+[INFO] Building course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ course ---
+[INFO] Deleting /Volumes/course/target
+[INFO]
+[INFO] --- frontend-maven-plugin:1.11.2:install-node-and-npm (install node and npm) @ course ---
+[INFO] Node v15.4.0 is already installed.
+[INFO] NPM 7.3.0 is already installed.
+[INFO]
+[INFO] --- frontend-maven-plugin:1.11.2:npm (npm install) @ course ---
+[INFO] Running 'npm install' in /Volumes/course/src/frontend
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-cascade-layers@1.1.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-color-function@1.1.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-font-format-keywords@1.0.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-hwb-function@1.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-ic-unit@1.0.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-is-pseudo-class@2.0.7',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-nested-calc@1.0.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-normalize-display-values@1.0.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-oklab-function@1.1.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-progressive-custom-properties@1.3.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-stepped-value-functions@1.0.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-text-decoration-shorthand@1.0.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-trigonometric-functions@1.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/postcss-unset-value@1.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@csstools/selector-specificity@2.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@eslint/eslintrc@1.4.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/expect-utils@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-get-type@29.2.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/schemas@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/schemas@29.0.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/types@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'diff-sequences@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'expect@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-diff@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-get-type@29.2.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-matcher-utils@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-message-util@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-util@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'pretty-format@29.3.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/eslint-plugin@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/experimental-utils@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/parser@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/scope-manager@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/type-utils@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/types@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/typescript-estree@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/utils@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@typescript-eslint/visitor-keys@5.48.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'css-blank-pseudo@3.0.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'css-has-pseudo@3.0.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'css-prefers-color-scheme@6.0.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'eslint@8.31.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'eslint-plugin-jest@25.7.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'eslint-plugin-testing-library@5.9.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0', npm: '>=6' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'eslint-scope@7.1.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'eslint-visitor-keys@3.3.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-worker@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'espree@9.4.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-watch-typeahead@1.1.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.22.0 || ^14.17.0 || >=16.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/console@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/test-result@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: '@jest/types@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-message-util@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-regex-util@28.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-util@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'jest-watcher@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'pretty-format@28.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-attribute-case-insensitive@5.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-color-functional-notation@4.2.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-color-hex-alpha@8.0.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-color-rebeccapurple@7.1.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-custom-media@8.0.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-custom-properties@12.1.11',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-custom-selectors@6.0.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-dir-pseudo-class@6.0.5',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-double-position-gradients@3.1.2',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-env-function@4.0.6',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-focus-visible@6.0.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-focus-within@5.0.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-gap-properties@3.0.5',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-image-set-function@4.0.7',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-js@4.0.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >= 16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-lab-function@4.2.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-logical@5.0.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-nesting@10.2.0',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-opacity-percentage@1.1.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-overflow-shorthand@3.0.4',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-place@7.0.5',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-preset-env@7.8.3',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-pseudo-class-any-link@7.1.6',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO] npm WARN EBADENGINE Unsupported engine {
+[INFO] npm WARN EBADENGINE   package: 'postcss-selector-not@6.0.1',
+[INFO] npm WARN EBADENGINE   required: { node: '^12 || ^14 || >=16' },
+[INFO] npm WARN EBADENGINE   current: { node: 'v15.4.0', npm: '7.3.0' }
+[INFO] npm WARN EBADENGINE }
+[INFO]
+[INFO] up to date, audited 1535 packages in 3s
+[INFO]
+[INFO] 228 packages are looking for funding
+[INFO]   run `npm fund` for details
+[INFO]
+[INFO] 6 high severity vulnerabilities
+[INFO]
+[INFO] To address all issues (including breaking changes), run:
+[INFO]   npm audit fix --force
+[INFO]
+[INFO] Run `npm audit` for details.
+[INFO]
+[INFO] --- frontend-maven-plugin:1.11.2:npm (npm run build) @ course ---
+[INFO] Running 'npm run build' in /Volumes/course/src/frontend
+[INFO]
+[INFO] > frontend@0.1.0 build
+[INFO] > react-scripts build
+[INFO]
+[INFO] Creating an optimized production build...
+[INFO] Compiled with warnings.
+[INFO]
+[INFO] [eslint]
+[INFO] src/App.js
+[INFO]   Line 2:24:   'Radio' is defined but never used                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+[INFO]   Line 74:13:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+[INFO]
+[INFO] src/StudentDrawerForm.js
+[INFO]   Line 8:7:  'antIcon' is assigned a value but never used  no-unused-vars
+[INFO]
+[INFO] Search for the keywords to learn more about each warning.
+[INFO] To ignore, add // eslint-disable-next-line to the line before.
+[INFO]
+[INFO] File sizes after gzip:
+[INFO]
+[INFO]   248.1 kB (+17.29 kB)  build/static/js/main.88cc908a.js
+[INFO]   1.78 kB               build/static/js/787.cda612ba.chunk.js
+[INFO]   541 B                 build/static/css/main.073c9b0a.css
+[INFO]
+[INFO] The project was built assuming it is hosted at /.
+[INFO] You can control this with the homepage field in your package.json.
+[INFO]
+[INFO] The build folder is ready to be deployed.
+[INFO] You may serve it with a static server:
+[INFO]
+[INFO]   npm install -g serve
+[INFO]   serve -s build
+[INFO]
+[INFO] Find out more about deployment here:
+[INFO]
+[INFO]   https://cra.link/deployment
+[INFO]
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Volumes/course/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (copy-build-folder) @ course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 14 resources
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Volumes/course/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Volumes/course/target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ course ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.pom (7.0 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.2/surefire-providers-2.22.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.2/surefire-providers-2.22.2.pom (2.5 kB at 67 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.pom (2.2 kB at 41 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom (1.2 kB at 32 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.pom (2.4 kB at 47 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.pom (2.0 kB at 45 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom (1.7 kB at 45 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar (2.2 kB at 39 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 73 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.jar (95 kB at 535 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.jar (66 kB at 370 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar (78 kB at 437 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.jar (135 kB at 668 kB/s)
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.course.CourseApplicationTests
+16:51:46.364 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:51:46.373 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:51:46.397 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.course.CourseApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:51:46.404 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.course.CourseApplicationTests], using SpringBootContextLoader
+16:51:46.406 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.course.CourseApplicationTests]: class path resource [com/example/course/CourseApplicationTests-context.xml] does not exist
+16:51:46.407 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.course.CourseApplicationTests]: class path resource [com/example/course/CourseApplicationTestsContext.groovy] does not exist
+16:51:46.407 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.course.CourseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:51:46.407 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.course.CourseApplicationTests]: CourseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:51:46.434 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.course.CourseApplicationTests]
+16:51:46.470 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Volumes/course/target/classes/com/example/course/CourseApplication.class]
+16:51:46.470 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.course.CourseApplication for test class com.example.course.CourseApplicationTests
+16:51:46.536 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.course.CourseApplicationTests]: using defaults.
+16:51:46.536 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+16:51:46.547 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7cbc3762, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a6f2de3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@49872d67, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56303b57, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b2a01d4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@8692d67, org.springframework.test.context.transaction.TransactionalTestExecutionListener@78f5c518, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2f48b3d2, org.springframework.test.context.event.EventPublishingTestExecutionListener@34f7234e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4c550889]
+16:51:46.549 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@293a5f75 testClass = CourseApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@fcb4004 testClass = CourseApplicationTests, locations = '{}', classes = '{class com.example.course.CourseApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@17503f6b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@36804139, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32115b28, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d7758be, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7283d3eb, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@d4342c2], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+16:51:46.570 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2023-03-11 16:51:46.755  INFO 4466 --- [           main] c.example.course.CourseApplicationTests  : Starting CourseApplicationTests using Java 11.0.15 on Codys-MBP with PID 4466 (started by codytran in /Volumes/course)
+2023-03-11 16:51:46.757  INFO 4466 --- [           main] c.example.course.CourseApplicationTests  : No active profile set, falling back to default profiles: default
+2023-03-11 16:51:47.173  INFO 4466 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-11 16:51:47.205  INFO 4466 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2023-03-11 16:51:47.618  INFO 4466 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-11 16:51:47.666  INFO 4466 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2023-03-11 16:51:47.785  INFO 4466 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-11 16:51:47.869  INFO 4466 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-11 16:51:48.022  INFO 4466 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-11 16:51:48.036  INFO 4466 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-03-11 16:51:48.572  INFO 4466 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-11 16:51:48.578  INFO 4466 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-11 16:51:48.939  WARN 4466 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-11 16:51:49.118  INFO 4466 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-11 16:51:49.198  INFO 4466 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-03-11 16:51:49.360  INFO 4466 --- [           main] c.example.course.CourseApplicationTests  : Started CourseApplicationTests in 2.786 seconds (JVM running for 3.556)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.151 s - in com.example.course.CourseApplicationTests
+2023-03-11 16:51:49.480  INFO 4466 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-11 16:51:49.481  INFO 4466 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-11 16:51:49.483  INFO 4466 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-11 16:51:49.491  INFO 4466 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ course ---
+[INFO] Building jar: /Volumes/course/target/course-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.4.3:repackage (repackage) @ course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO]
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ course ---
+[INFO] Installing /Volumes/course/target/course-0.0.1-SNAPSHOT.jar to /Users/codytran/.m2/repository/com/example/course/0.0.1-SNAPSHOT/course-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Volumes/course/pom.xml to /Users/codytran/.m2/repository/com/example/course/0.0.1-SNAPSHOT/course-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  41.468 s
+[INFO] Finished at: 2023-03-11T16:51:50-05:00
+[INFO] ------------------------------------------------------------------------

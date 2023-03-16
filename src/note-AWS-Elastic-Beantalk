@@ -1,0 +1,31 @@
+// EC2 instance that will host application
+4:51pm Added instance [i-09c5bd6e17494e67e] to your environment.
+
+
+4:51pm Created Load Balancer listener named: arn:aws:elasticloadbalancing:us-east-1:679290403332:listener/app/awseb-AWSEB-KYXS8EXCGYRY/2f7ce077d4b6346d/513db1a395d270c3
+
+4:51pm Created load balancer named:arn:aws:elasticloadbalancing:us-east-1:679290403332:loadbalancer/app/awseb-AWSEB-KYXS8EXCGYRY/2f7ce077d4b6346d
+
+4:49pm Created CloudWatch alarm named: awseb-e-jmdyysqde8-stack-AWSEBCloudwatchAlarmLow-18CPH4B4FHQA0
+
+4:49pm Created CloudWatch alarm named: awseb-e-jmdyysqde8-stack-AWSEBCloudwatchAlarmHigh-B2MW3SMB32YS
+
+4:49pm Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:679290403332:scalingPolicy:55f33952-f1b7-491c-9852-8ef8b3ffd39c:autoScalingGroupName/awseb-e-jmdyysqde8-stack-AWSEBAutoScalingGroup-1UEJAPVSXYVT6:policyName/awseb-e-jmdyysqde8-stack-AWSEBAutoScalingScaleDownPolicy-9h8MjiRyhuMP
+
+4:49pm Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:679290403332:scalingPolicy:a77a546e-f4da-4a8b-b503-c3c7ad7a2b78:autoScalingGroupName/awseb-e-jmdyysqde8-stack-AWSEBAutoScalingGroup-1UEJAPVSXYVT6:policyName/awseb-e-jmdyysqde8-stack-AWSEBAutoScalingScaleUpPolicy-gaSzYktfTRiq
+
+4:49pm Waiting for EC2 instances to launch. This may take a few minutes.
+
+4:49pm Created Auto Scaling group named: awseb-e-jmdyysqde8-stack-AWSEBAutoScalingGroup-1UEJAPVSXYVT6
+
+4:48pm Environment health has transitioned to Pending. Initialization in progress (running for 25 seconds). There are no instances.
+
+4:48pm Created target group named: arn:aws:elasticloadbalancing:us-east-1:679290403332:targetgroup/awseb-AWSEB-URU2OXIOER07/024fc90c05235ae0
+
+4:48pm Created security group named: awseb-e-jmdyysqde8-stack-AWSEBSecurityGroup-15KQEKBG7MEUI
+
+4:47pm Created security group named: sg-0e65771cfccbebf27
+
+4:47pm Using elasticbeanstalk-us-east-1-679290403332 as Amazon S3 storage bucket for environment data.
+
+4:47pm createEnvironment is starting.

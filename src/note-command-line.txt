@@ -1,0 +1,7 @@
+ To build a java project using maven WRAPPER
+
+    ./mvnw clean install
+
+running .jar file in target folder
+
+    java -jar [jar file]

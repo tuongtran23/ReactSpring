@@ -1,0 +1,98 @@
+- Build simple GET endpoint for API in Springboot
+
+- Build simple frontend in React
+
+- Create "build" folder in frontend via command "npm build" and copy over backend as "static folder"
+
+- Config pom.xml (in plugin section) to install React internally in Springboot using Maven Front Plugin
+
+- Config pom.xml (in plugin section) to have "static folder" in "target" folder - target folder is the built folder used when application runs
+
+-- To run application in one command rather than backend and frontend separately: run the .jar file with command "java -jar [jar file]"
+
+- IMPORTANT command to remember: "./mvnw clean install" will scan through what being config in pom.xml and creare .jar file
+
+- Install Docker Desktop and Docker
+
+- Jib library can containerize application without Docker
+
+- To reduce lengthy arguments when building an image in Jib, a profile can be set up in pom.xml
+    + To activate a profile use -P flag. e.g: ./mvnw clean install -P build-frontend -P jib-push-to-dockerhub
+
+- Overview of AWS, then go to Elastic Beantalk -- document: https://viblo.asia/p/trien-khai-ung-dung-voi-elastic-beanstalk-Qbq5Q1NJ5D8
+
+- Deploy first instance into EC2 (needs more detail)
+
+- Critical question: what happens when we restart the application, is the yaml file automatically push what's in docker hub to Beanstalk?
+
+- URl for instance deploy in Beanstalk
+
+- Setup PSQL in Docker:
+    + Create network in docker
+    + Create a database host container named "hostdb" in docker
+    + Create a temporary (deleted after termination) and interactive container that execute psql program
+    + The interactive container interact with database hostdb via network created
+
+- Modify Student.java for JPA database connection
+
+- Modify application.properties for configuration
+
+- So now when the application is run, the table will be created in the database.
+
+- Insert 1000 dummy students entry into the database.
+
+- Build Controller => Repository => Service (N tiers architecture)
+
+- Update application.properties so table will append if exists instead of being wiped out
+
+- Add a POST endpoint in springboot API
+
+- Wiring the POST endpoint with a button in the UI, this button was chosen in url "https://ant.design/components/icon" (detail in React note)
+
+- Integrate StudentDrawerForm into App.js (detail in React note)
+
+- Define addNewStudents function into client.js and wire this function into Button in StudentDrawerForm. So StudentDrawerForm => call addNewStudents => POST endpoint to populate entry in database
+
+- Add a DELETE endpoint in springboot API
+
+- Wiring the DELETE endpoint to Popconfirm
+
+- Define deleteStudent(studentId) function in client.js and wire this function into Popconfirm's onConfirm attribute
+
+- To have server include error message, add more detail into Application.properties (detail in note-application-property)
+
+- TO DO: revisit "Notification" implementation + add this in error handling
+
+- Error handling should be integrated with notification for best of use:
+    + GET endpoint - getAllStudent() function should have notification for why it can't work
+
+    + POST endpoint - The database should not have duplicated emails in the system,
+                      always check if email does exist before actually post,
+                      if it does, give a notification to user that the email exists
+
+    + DELETE
+
+
+- "Application.properties" and "Application-dev.properties" are the profile files
+
+    + To run the application with each profiles, set the env variable SPRING_PROFILES_ACTIVE equals to one of these options:
+
+        _ SPRING_PROFILES_ACTIVE=test if the profile is "Application-test.properties"
+
+        _ SPRING_PROFILES_ACTIVE=dev if the profile is "Application-dev.properties"
+
+        - No need to set if the profile is default "Application.properties"
+
+    + Why needs dev profile?
+
+        _ This dev profile will point the database of the application to RDS to AWS instead:
+
+          In default: spring.datasource.url=jdbc:postgresql://localhost:5432/amigoscode
+          In dev:     spring.datasource.url=jdbc:postgresql://awseb-e-jmdyysqde8-stack-awsebrdsdatabase-phqbcvgx6k8f.c0yyfoqzdl66.us-east-1.rds.amazonaws.com:5432/amigoscode
+
+
+- Configure in RDS setup to open FW rules for incoming traffic (INBOUND)
+
+- Use ./mvnw clean install -P build-frontend -P jib-push-to-dockerhub -Dapp.image.tag=3 to push newest version to Dockerhub
+
+- Modify docker-compose.yml to have the environment variable SPRING_PROFILES_ACTIVE set to "dev"

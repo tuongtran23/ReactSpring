@@ -1,0 +1,78 @@
+First node needs installing so 3 commands can have version:
+    + npm
+    + npx
+    + node
+
+create an react app:
+    + npx create-react-app@4.0.3 frontend
+
+start the app:
+    + npm start
+
+
+Wiring the POST endpoint with a button in the UI, his button was chosen in url "https://ant.design/components/icon":
+    - In App.js
+        + Add:  import { PlusOutlined } from '@ant-design/icons'
+        + Change the followings in Table bracket:
+
+            Add <Button> in "title" attribute
+            In <Button> "icon" attribute, set icon attribute to <PlusOutlined/>
+
+            Result:
+            return <Table    title={()=>
+                    <Button type="primary" shape="round" icon={<PlusOutlined/>} size="large">
+                        Add New Student
+                    </Button> }
+                />;
+             }
+
+Integrate StudentCrawerForm into App.js:
+    - Create StudentCraweForm.js and paste the copied content from Amigose course
+
+    - In Apps.js do the followings:
+
+        // 1
+        import StudentDrawerForm from "./StudentDrawerForm";
+
+        // 2
+        const [showDrawer, setShowDrawer] = useState(false);
+
+        // 3
+        Add StudentDrawerForm component (parallel to table component)
+        <StudentDrawerForm showDrawer={showDrawer} setShowDrawer={setShowDrawer}/>
+
+        Change from "Return <Table />" to:
+
+            Return <> <StudentDrawerForm/> <Table/>  </>
+
+        // 4
+        Adding onClick attibute to Button component in Table component
+        onClick={() => setShowDrawer(!showDrawer)}
+
+
+- Define addNewStudents in client.js:
+    export const addNewStudents = (student) =>
+        fetch("api/v1/students", {
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify(student)
+        });
+
+- Task: Figure out how onFinish and onFinishFailed works under the hood in Form Component
+
+- Note:
+
+    In React, all component will have attributes and each will be set to a variable as other component
+        +Ex:
+         const antIcon = <LoadingOutlined style={{ fontSize: 24}} spin/>
+
+         then <Spin indicator={antIcon} />
+
+    Also, in component definition, if the component is defined with arguments as follows:
+
+        function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) { impletmentation ...}
+
+    It then will be called as a component in App as follows:
+        <StudentDrawerForm showDrawer={some variable} setShowDrawer={some variable} fetchStudents={some variable}/>
