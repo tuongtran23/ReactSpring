@@ -8,7 +8,7 @@
 
 - Config pom.xml (in plugin section) to have "static folder" in "target" folder - target folder is the built folder used when application runs
 
--- To run application in one command rather than backend and frontend separately: run the .jar file with command "java -jar [jar file]"
+- To run application in one command rather than backend and frontend separately: run the .jar file with command "java -jar [jar file]"
 
 - IMPORTANT command to remember: "./mvnw clean install" will scan through what being config in pom.xml and creare .jar file
 
