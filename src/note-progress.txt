@@ -81,11 +81,11 @@
 
         _ SPRING_PROFILES_ACTIVE=dev if the profile is "Application-dev.properties"
 
-        - No need to set if the profile is default "Application.properties"
+        _ No need to set if the profile is default "Application.properties"
 
     + Why needs dev profile?
 
-        _ This dev profile will point the database of the application to RDS to AWS instead:
+        _ This dev profile will point the database of the application to RDS in AWS instead:
 
           In default: spring.datasource.url=jdbc:postgresql://localhost:5432/amigoscode
           In dev:     spring.datasource.url=jdbc:postgresql://awseb-e-jmdyysqde8-stack-awsebrdsdatabase-phqbcvgx6k8f.c0yyfoqzdl66.us-east-1.rds.amazonaws.com:5432/amigoscode

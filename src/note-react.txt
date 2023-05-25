@@ -1,18 +1,54 @@
-First node needs installing so 3 commands can have version:
-    + npm
-    + npx
-    + node
+1. First node needs installing so 3 commands can have version:
+    1. node
+    2. npm
+    3. npx
 
-create an react app:
+2. create an react app:
     + npx create-react-app@4.0.3 frontend
 
-start the app:
+
+
+
+Reference:
+https://nodejs.org/en/
+
+https://reactjs.org/
+
+https://www.npmjs.com/package/create-react-app
+
+https://github.com/facebook/create-react-app
+
+
+
+3. Change into frontend dir: cd frontend
+
+4. Remove the git: rm -rf .git (-r recursive, -f force)
+
+
+5. start the app:
     + npm start
 
+6. Install libray antd: npm install --save antd:
+    Dependency could be checked in package.json
+
+7. Try adding a basic button:
+    - In App.js
+        + Add:  import { Button } from "antd"
+
+
+8. Styling to be implemented in index.css
+    -In index.css
+        + Add: @import '~antd/dist/antd.css';
+
+    Note: don't forget '@' and ';' at the beginning and at the end.
+
+9. Install unfetch: npm i -S unfetch 
 
 Wiring the POST endpoint with a button in the UI, his button was chosen in url "https://ant.design/components/icon":
     - In App.js
+
         + Add:  import { PlusOutlined } from '@ant-design/icons'
+    
         + Change the followings in Table bracket:
 
             Add <Button> in "title" attribute
@@ -22,9 +58,9 @@ Wiring the POST endpoint with a button in the UI, his button was chosen in url "
             return <Table    title={()=>
                     <Button type="primary" shape="round" icon={<PlusOutlined/>} size="large">
                         Add New Student
-                    </Button> }
+                    </Button> }\
                 />;
-             }
+             
 
 Integrate StudentCrawerForm into App.js:
     - Create StudentCraweForm.js and paste the copied content from Amigose course
